@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>CSS3 Images</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .window div{
+                width: 100px;
+                height: 100px;
+                margin-top: 50px;
+                border: 6px solid rgba( 215,216,220,1 );
+                background-color: rgba( 245,246,255,1 );
+                overflow: hidden;
+                position: absolute;
+                border-radius: 40px;
+            }
+
+            .window div:before , .window div:after {
+                width: 10px;
+                height: 200px;
+                position: absolute;
+                content: "";
+                margin-left: 6px;
+                margin-top: -40px;
+                -webkit-transform: rotate( 45deg );
+                -moz-transform: rotate( 45deg );
+                -ms-transform: rotate( 45deg );
+                -o-transform: rotate( 45deg );
+                transform: rotate( 45deg );
+                background-color: #fff; 
+                opacity: 0.5;
+            }
+
+            .plane {
+                width: 850px;
+                height: 300px;
+                margin:100px;
+                position: relative;
+                box-shadow: 0px -100px 0px rgba( 228,230,234,0.6 ) inset;
+                background-color: rgba( 235,236,240,1 );
+                overflow: hidden;
+
+
+            }
+
+            .window div:nth-of-type(1){
+                margin-left: 50px;
+            }
+
+            .window div:nth-of-type(2){
+                margin-left: 250px;
+            }
+
+            .window div:nth-of-type(3){
+                margin-left: 450px;
+            }
+
+            .window div:nth-of-type(4){
+                margin-left: 650px;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="plane">
+            <div class="window">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </body>
+</html>

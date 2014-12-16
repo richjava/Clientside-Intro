@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js">
+  
+</script>
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script>
+        jQuery(window).ready(function(){
+            jQuery("#btnInit").click(initiate_geolocation);
+        });
+ 
+        function initiate_geolocation() {
+            navigator.geolocation.getCurrentPosition(handle_geolocation_query);
+        }
+ 
+        function handle_geolocation_query(position) {     
+//configure map and marker 	
+var image_url = "http://maps.google.com/maps/api/staticmap?sensor=false&center=" + position.coords.latitude + "," +
+position.coords.longitude + "&zoom=14&size=300x400&markers=color:red|label:A|" +                     position.coords.latitude + ',' +
+position.coords.longitude;      
+//remove map if exists
+jQuery("#map").remove();
+//append map
+jQuery(document.body).append( jQuery(document.createElement("img")).attr("src", image_url).attr('id','map')     ); 
+
+        }
+        
+
+
+    </script>
+  </head>
+  <body>
+    <div>
+      <button id="btnInit" >Find my location</button>
+    </div>
+    
+    <div id ="map_canvas">
+      
+    </div>
+ 
+  </body>
+</html>

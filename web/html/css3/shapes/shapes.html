@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Shapes</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+}
+#heart:before,
+#heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: red;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+#heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+
+.coffee{
+/*  shape-outside: url(images/coffee.png);
+  shape-image-threshold: 0.5;*/
+  shape-outside: circle(50%);
+  /* identical to: */
+  shape-outside: circle(50%) margin-box;
+  float: left;
+}
+p{font-size: 1.4em;}
+        </style>
+    </head>
+    <body>
+<!--        http://css-tricks.com/examples/ShapesOfCSS/-->
+<div id="heart"></div>
+
+<!--http://www.html5rocks.com/en/tutorials/shapes/getting-started/-->
+<img class="coffee" src="../../../images/coffee.png" />
+<p>Coffee is a brewed beverage prepared from the roasted or baked seeds of several species of an evergreen shrub of the genus Coffea. The two most common sources of coffee beans are the highly regarded Coffea arabica, and the "robusta" form of the hardier Coffea canephora. The latter is resistant to the coffee leaf rust (Hemileia vastatrix), but has a more bitter taste. Coffee plants are cultivated in more than 70 countries, primarily in equatorial Latin America, Southeast Asia, and Africa. Once ripe, coffee "berries" are picked, processed and dried to yield the seeds inside. The seeds are then roasted to varying degrees, depending on the desired flavor, before being ground and brewed to create coffee.
+
+Coffee is slightly acidic (pH 5.0–5.1[1]) and can have a stimulating effect on humans because of its caffeine content. It is one of the most popular drinks in the world.[2] It can be prepared and presented in a variety of ways. The effect of coffee on human health has been a subject of many studies; however, results have varied in terms of coffee's relative benefit.[3] The majority of recent research suggests that moderate coffee consumption is benign or mildly beneficial in healthy adults. However, the diterpenes in coffee may increase the risk of heart disease.[4]
+
+Coffee cultivation first took place in Abyssinia[5][6] the earliest credible evidence of coffee-drinking appears in the middle of the 15th century in the Sufi shrines of Yemen.[6] In the Horn of Africa and Yemen, coffee was used in local religious ceremonies. As these ceremonies conflicted with the beliefs of the Christian church, the Ethiopian Church banned the secular consumption of coffee until the reign of Emperor Menelik II.[7] The beverage was also banned in Ottoman Turkey during the 17th century for political reasons,[8] and was associated with rebellious political activities in Europe.
+
+An important export commodity, coffee was the top agricultural export for twelve countries in 2004,[9] and it was the world's seventh-largest legal agricultural export by value in 2005.[10] Green (unroasted) coffee is one of the most traded agricultural commodities in the world.[11] Some controversy is associated with coffee cultivation and its impact on the environment. Consequently, organic coffee is an expanding market.</p>
+
+    </body>
+</html>

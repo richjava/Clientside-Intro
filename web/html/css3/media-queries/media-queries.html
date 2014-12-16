@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS3 media queries</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            /* Smartphones (portrait and landscape) ----------- */
+            @media only screen 
+            and (min-device-width : 320px) 
+            and (max-device-width : 480px) {
+                /* Styles */
+                .my-para{color:moccasin;}
+            }
+
+            /* Smartphones (landscape) ----------- */
+            @media only screen 
+            and (min-width : 321px) {
+                /* Styles */
+                .my-para{color:mistyrose;}
+            }
+
+            /* Smartphones (portrait) ----------- */
+            @media only screen 
+            and (max-width : 320px) {
+                /* Styles */
+                .my-para{color:magenta;}
+            }
+
+            /* iPads (portrait and landscape) ----------- */
+            @media only screen 
+            and (min-device-width : 768px) 
+            and (max-device-width : 1024px) {
+                /* Styles */
+                .my-para{color:violet;}
+            }
+
+            /* iPads (landscape) ----------- */
+            @media only screen 
+            and (min-device-width : 768px) 
+            and (max-device-width : 1024px) 
+            and (orientation : landscape) {
+                /* Styles */
+                .my-para{color:purple;}
+            }
+
+            /* iPads (portrait) ----------- */
+            @media only screen 
+            and (min-device-width : 768px) 
+            and (max-device-width : 1024px) 
+            and (orientation : portrait) {
+                /* Styles */
+                .my-para{color:silver;}
+            }
+
+            /* Desktops and laptops ----------- */
+            @media only screen 
+            and (min-width : 1224px) {
+                /* Styles */
+                .my-para{color:yellow;}
+            }
+
+            /* Large screens ----------- */
+            @media only screen 
+            and (min-width : 1824px) {
+                /* Styles */
+                .my-para{color:green;}
+            }
+
+            /* iPhone 4 ----------- */
+            @media
+            only screen and (-webkit-min-device-pixel-ratio : 1.5),
+            only screen and (min-device-pixel-ratio : 1.5) {
+                /* Styles */
+                .my-para{color:red;}
+            }
+        </style>
+    </head>
+    <body>
+        <p class="my-para">This paragraph will change colors using CSS3 media queries!</p>
+    </body>
+</html>

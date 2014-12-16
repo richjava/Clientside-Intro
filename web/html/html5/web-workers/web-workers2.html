@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+<!--output tag is html5-->
+        <p><output id="result"></output></p>
+        <button onclick="startWorker()">Start Worker</button> 
+        <br><br>
+
+        <script>
+            function startWorker() {
+                //http://www.html5rocks.com/en/tutorials/workers/basics/
+                var worker = new Worker('../../../js/html5/worker2.js');
+
+                worker.addEventListener('message', function(e) {
+                    document.getElementById("result").innerHTML = 'Worker said: ' + e.data;
+                }, false);
+                worker.postMessage('Hello World'); // Send data to our worker. 
+            }
+        </script>
+
+    </body>
+</html>

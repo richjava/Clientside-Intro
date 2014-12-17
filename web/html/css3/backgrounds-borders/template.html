@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Borders</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style> 
+            span{
+                width:100px;
+                height:40px;
+                margin-bottom: 20px;
+                padding: 10px;
+                text-align: center;
+                display: inline-block;
+            }
+            #span1 {
+                border: 2px solid;
+                border-radius:5px;
+            }
+            #span2 {
+                box-shadow: 10px 10px 5px #888888;
+            }
+            #span3 {
+                -webkit-border-image: url(http://www.w3schools.com/css/border.png) 30 30 round; /* Safari 3.1-5 */
+                -o-border-image: url(http://www.w3schools.com/css/border.png) 30 30 round; /* Opera 11-12.1 */
+                border-image: url(http://www.w3schools.com/css/border.png) 30 30 round;
+                background-repeat: no-repeat;
+            }
+            #span4 {
+                background: url(//utopia.yoobee.ac.nz/moodle/pluginfile.php/1/theme_clean/logo/1416523346/utopialogo2014.png);
+                background-size: 80px 40px;
+                background-repeat: no-repeat;
+            }
+            #span5 {
+                background: url(//utopia.yoobee.ac.nz/moodle/pluginfile.php/1/theme_clean/logo/1416523346/utopialogo2014.png),url(http://www.w3schools.com/css/border.png);
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h2>Backgrounds</h2>
+        <p><a href="http://www.w3schools.com/css/css3_borders.asp">http://www.w3schools.com/css/css3_borders.asp</a></p>    
+        <span id="span1">span1</span>
+        <span id="span2">span2</span>
+        <span id="span3">span3</span>      
+        <h2>Backgrounds and Borders</h2>
+        <p><a href="http://www.w3schools.com/css/css3_backgrounds.asp">http://www.w3schools.com/css/css3_backgrounds.asp</a></p>
+        <span id="span4">span4</span>
+        <span id="span5">span5</span>
+        <span id="span6">span6</span>  
+        <script type="text/javascript">
+        </script>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2D and 3D Transformations</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>           
+            span{
+                width:100px;
+                height:40px;
+                padding: 10px;
+                text-align: center;
+                display: inline-block;
+                background-color: silver;
+            }
+            #span1 {                                  
+                /* Rotate div */
+                -ms-transform: rotate(30deg); /* IE 9 */
+                -webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
+                transform: rotate(30deg); /* Standard syntax */
+            }
+            #span2 {
+                /* move from current position 500px left (x-axis) and 100px down (y-axis) */
+                -ms-transform: translate(500px,100px); /* IE 9 */
+                -webkit-transform: translate(500px,100px); /* Chrome, Safari, Opera */
+                transform: translate(500px,100px);
+            }
+            #span3 {
+                /*scale to 1.5 times higher and 2 times wider*/
+                -ms-transform: scale(2,1.5); /* IE 9 */
+                -webkit-transform: scale(2,1.5); /* Chrome, Safari, Opera */
+                transform: scale(2,1.5);
+            }
+            #span4 {
+                /*skew*/
+                -ms-transform: skew(30deg,20deg); /* IE 9 */
+                -webkit-transform: skew(30deg,20deg); /* Chrome, Safari, Opera */
+                transform: skew(30deg,20deg);
+                margin-left: 100px;
+            }
+            #span5 {
+                /*matrix combines all of the 2D transform methods into one. Six parameters.*/
+                -ms-transform: matrix(0.866,0.5,-0.5,0.866,0,0); /* IE 9 */
+                -webkit-transform: matrix(0.866,0.5,-0.5,0.866,0,0); /* Chrome, Safari, Opera */
+                transform: matrix(0.866,0.5,-0.5,0.866,0,0);
+            }
+            #span6 {
+                /*rotateX() mehtod*/
+                -webkit-transform: rotateX(120deg); /* Chrome, Safari, Opera */
+                transform: rotateX(120deg);
+            }
+            #span7 {
+                /*rotateY() method*/
+                -webkit-transform: rotateY(130deg); /* Chrome, Safari, Opera */
+                transform: rotateY(130deg);
+            }
+
+        </style>
+    </head>
+    <body>
+        <h2>2D Transformations</h2>
+        <p><a href="http://www.w3schools.com/css/css3_2dtransforms.asp">http://www.w3schools.com/css/css3_2dtransforms.asp</a></p>    
+        <span id="span1">span1</span>
+        <span id="span2">span2</span>
+        <span id="span3">span3</span>      
+        <span id="span4">span4</span> 
+        <span id="span5">span5</span> 
+
+        <h2>3D Transformations</h2>
+        <p><a href="http://www.w3schools.com/css/css3_3dtransforms.asp">http://www.w3schools.com/css/css3_3dtransforms.asp</a></p>
+        <span id="span6">span6</span>
+        <span id="span7">span7</span>
+      
+        <script type="text/javascript">
+        </script>
+    </body>
+</html>

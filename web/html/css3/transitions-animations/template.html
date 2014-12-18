@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transitions and Animations</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>           
+            span{
+                width:100px;
+                height:40px;
+                padding: 10px;
+                text-align: center;
+                display: inline-block;
+                background-color: silver;
+            }
+            #span1 {                                  
+                /* grow width */
+                -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+                transition: width 2s;
+            }
+            #span1:hover {
+                width: 300px;
+            }
+
+            #span2 {
+                -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* For Safari 3.1 to 6.0 */
+                transition: width 2s, height 2s, transform 2s;
+            }
+            #span2:hover {
+                width: 200px;
+                height: 200px;
+                -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+                transform: rotate(180deg);
+            }
+            #span3 {
+                -webkit-animation: anim1 5s; /* Chrome, Safari, Opera */
+                animation: anim1 5s;
+            }
+            /* Chrome, Safari, Opera */
+            @-webkit-keyframes anim1 {
+                from {background: silver;}
+                to {background: yellow;}
+            }
+
+            /* Standard syntax */
+            @keyframes anim1 {
+                from {background: silver;}
+                to {background: yellow;}
+            }
+
+            #span4 {
+                -webkit-animation: anim2 5s; /* Chrome, Safari, Opera */
+                animation: anim2 5s;
+            }
+
+            /* Chrome, Safari, Opera */
+            @-webkit-keyframes anim2 {
+                0%   {background: silver;}
+                25%  {background: yellow;}
+                50%  {background: blue;}
+                100% {background: green;}
+            }
+
+            /* Standard syntax */
+            @keyframes anim2 {
+                0%   {background: silver;}
+                25%  {background: yellow;}
+                50%  {background: blue;}
+                100% {background: green;}
+            }
+
+            #span5 {
+                -webkit-animation: anim3 5s; /* Chrome, Safari, Opera */
+                animation: anim3 5s;
+                /*needs relative position to move*/
+                position: relative;
+            }
+
+            /* Chrome, Safari, Opera */
+            @-webkit-keyframes anim3 {
+                0%   {background:red; left:0px; top:0px;}
+                25%  {background:yellow; left:200px; top:0px;}
+                50%  {background:blue; left:200px; top:200px;}
+                75%  {background:green; left:0px; top:200px;}
+                100% {background:red; left:0px; top:0px;}
+            }
+
+            /* Standard syntax */
+            @keyframes anim3 {
+                0%   {background:red; left:0px; top:0px;}
+                25%  {background:yellow; left:200px; top:0px;}
+                50%  {background:blue; left:200px; top:200px;}
+                75%  {background:green; left:0px; top:200px;}
+                100% {background:red; left:0px; top:0px;}
+            }
+            #span6 {
+                position: relative;
+                /* Chrome, Safari, Opera */
+                /*longhand*/
+/*                -webkit-animation-name: anim4;
+                -webkit-animation-duration: 5s;
+                -webkit-animation-timing-function: linear;
+                -webkit-animation-delay: 2s;
+                -webkit-animation-iteration-count: infinite;
+                -webkit-animation-direction: alternate;
+                -webkit-animation-play-state: running;
+                 Standard syntax 
+                animation-name: anim4;
+                animation-duration: 5s;
+                animation-timing-function: linear;
+                animation-delay: 2s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-play-state: running;*/
+
+                /*same in shorthand*/
+                -webkit-animation: anim4 5s linear 2s infinite alternate; /* Chrome, Safari, Opera */
+                animation: anim4 5s linear 2s infinite alternate;
+            }
+
+            /* Chrome, Safari, Opera */
+            @-webkit-keyframes anim4 {
+                0%   {background:red; left:0px; top:0px;}
+                25%  {background:yellow; left:200px; top:0px;}
+                50%  {background:blue; left:200px; top:200px;}
+                75%  {background:green; left:0px; top:200px;}
+                100% {background:red; left:0px; top:0px;}
+            }
+
+            /* Standard syntax */
+            @keyframes anim4 {
+                0%   {background:red; left:0px; top:0px;}
+                25%  {background:yellow; left:200px; top:0px;}
+                50%  {background:blue; left:200px; top:200px;}
+                75%  {background:green; left:0px; top:200px;}
+                100% {background:red; left:0px; top:0px;}
+            }
+
+        </style>
+    </head>
+    <body>
+        <h2>Transitions</h2>
+        <p><a href="http://www.w3schools.com/css/css3_transitions.asp">http://www.w3schools.com/css/css3_transitions.asp</a></p>    
+        <span id="span1">span1</span>
+        <span id="span2">span2</span>
+
+
+        <h2>Animations</h2>
+        <p><a href="http://www.w3schools.com/css/css3_animations.asp">http://www.w3schools.com/css/css3_animations.asp</a></p>
+        <span id="span3">span3</span>      
+        <span id="span4">span4</span> 
+        <span id="span5">span5</span> 
+        <span id="span6">span6</span> 
+        <script type="text/javascript">
+        </script>
+    </body>
+</html>
